@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: var(--text-color);
+    text-decoration: none;
+    list-style: none;
+}
+
+:root {
+    --text-color: white;
+    --bg-url: url(../img/bg-mobile.jpg);
+    --stroke-color: rgba(255, 255, 255, 0.8);
+    --surface-color: rgba(0, 0, 0, 0.1);
+    --surface-color-hover: rgba(255, 255, 255, 0.3);
+    --highlight-color: rgba(255, 255, 255, 0.6);
+    --darkmode-bg-url: url(../img/moon-stars.svg);
+}
+
+.light {
+    --text-color: black;
+    --bg-url: url(../img/bg-mobile-light.jpg);
+    --stroke-color: rgba(0, 0, 0, 0.8);
+    --surface-color: rgba(255, 255, 255, 0.1);
+    --surface-color-hover: rgba(0, 0, 0, 0.3);
+    --highlight-color: rgba(0, 0, 0, 0.6);
+    --darkmode-bg-url: url(../img/sun.svg);
+}
+
+
+body {
+    background-image: var(--bg-url);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+#container {
+    width: 360px;
+    margin: 100px auto;
+    padding: 0 15px;
+}
+
+
+/* container da foto */
+#profile {
+    text-align: center;
+}
+
+#profile img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+#profile p {
+    font-weight: 500px;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+
+/*container do botao dark mode*/
+#darkMode {
+    position: relative;
+    width: 64px;
+    margin: 10px auto;
+}
+/*icone do dark mode*/
+#darkMode button{
+    width: 34px;
+    height: 34px;
+    background: white var(--darkmode-bg-url) no-repeat center;
+    border-radius: 50%;
+    border: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+/* posiçao do botao com class light ativa*/
+.light #darkMode button {
+    right: 0;
+    left: initial;
+}
+/*switch do dark mode*/
+#darkMode span {
+    display: block;
+    border: 1px solid var(--stroke-color);
+    width: 63px;
+    height: 32px;
+    background: var(--surface-color);
+    border-radius: 9999px;
+    cursor: pointer;
+}
+#darkMode span:hover{
+    background-color: var(--surface-color-hover);
+}
+
+
+/*lista de botoes*/
+.list{
+    margin: 15px auto;    
+}
+
+.list > a {
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--stroke-color);
+    border-radius: 10px;
+    background-color: var(--surface-color);
+    transition: background .3s;
+}
+
+.list > a:hover {
+    background-color: var(--surface-color-hover);
+}
+
+
+/*icones das redes sociais*/
+#social-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 25px;
+}
+
+#social-icons > a {
+    padding: 10px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.4s;
+}
+
+#social-icons > a:hover {
+    background-color: var(--highlight-color);
+}
+
+
+/*rodapé do codigo*/
+footer {
+    padding: 20px 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+footer > a {
+    text-decoration: underline;
+}
+
